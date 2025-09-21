@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gen AI Tools</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4',
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#202124",
+                        "text-dark": "#E8EAED",
+                        "secondary-text-light": "#5F6368",
+                        "secondary-text-dark": "#9AA0A6",
+                        "border-light": "#DADCE0",
+                        "border-dark": "#3C4043",
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        'DEFAULT': '8px',
+                        'lg': '16px',
+                        'xl': '24px',
+                        'full': '9999px',
+                    },
+                    boxShadow: {
+                        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="flex flex-col h-screen">
+        <header
+            class="flex items-center justify-between px-6 py-3 border-b border-border-light dark:border-border-dark">
+            <div class="flex items-center gap-8">
+                <h1 class="text-2xl font-bold">
+                    <span style="color: #4285F4;">D</span>
+                    <span style="color: #DB4437;">r</span>
+                    <span style="color: #F4B400;">e</span>
+                    <span style="color: #4285F4;">a</span>
+                    <span style="color: #0F9D58;">m</span>
+                    <span style="color: #DB4437;">e</span>
+                    <span style="color: #F4B400;">r</span>
+                </h1>
+                <nav
+                    class="hidden md:flex items-center gap-6 text-sm font-medium text-secondary-text-light dark:text-secondary-text-dark">
+                    <a class="hover:text-primary" href="dashboard.html">Dashboards</a>
+                    <a class="hover:text-primary" href="gen.html">Gen AI Tools</a>
+                    <a class="text-primary font-semibold" href="courses.html">Courses</a>
+                    <a class="hover:text-primary" href="sofskill.html">Softskills Helper</a>
+                    <a class="hover:text-primary" href="market.html">Market Insights</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="flex items-center gap-2 px-4 py-2 text-sm border rounded-full border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <span>English</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </button>
+                <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+            </div>
+        </header>
+        <main class="flex-grow grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+<aside class="md:col-span-1 lg:col-span-1 bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md space-y-6">
+<div>
+<h2 class="text-lg font-semibold mb-4">Career Goals</h2>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 text-sm px-3 py-1 rounded-full">
+<span>Software Engineer</span>
+<button class="ml-2 text-blue-800 dark:text-blue-200 hover:text-blue-900 dark:hover:text-blue-100">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<button class="flex items-center text-sm px-3 py-1 rounded-full border border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-sm mr-1">add</span>
+<span>Add goal</span>
+</button>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark my-4"></div>
+<div>
+<h2 class="text-lg font-semibold mb-4">Skills</h2>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 text-sm px-3 py-1 rounded-full">
+<span>Python</span>
+<button class="ml-2 text-green-800 dark:text-green-200 hover:text-green-900 dark:hover:text-green-100">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="flex items-center bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 text-sm px-3 py-1 rounded-full">
+<span>Data Analysis</span>
+<button class="ml-2 text-green-800 dark:text-green-200 hover:text-green-900 dark:hover:text-green-100">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="flex items-center bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 text-sm px-3 py-1 rounded-full">
+<span>Machine Learning</span>
+<button class="ml-2 text-green-800 dark:text-green-200 hover:text-green-900 dark:hover:text-green-100">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<button class="flex items-center text-sm px-3 py-1 rounded-full border border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-sm mr-1">add</span>
+<span>Add skills</span>
+</button>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark my-4"></div>
+<div>
+<h2 class="text-lg font-semibold mb-4">Interests</h2>
+<div class="flex flex-wrap gap-2">
+<div class="flex items-center bg-teal-100 dark:bg-teal-900/50 text-teal-800 dark:text-teal-200 text-sm px-3 py-1 rounded-full">
+<span>AI Startups</span>
+<button class="ml-2 text-teal-800 dark:text-teal-200 hover:text-teal-900 dark:hover:text-teal-100">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="flex items-center bg-teal-100 dark:bg-teal-900/50 text-teal-800 dark:text-teal-200 text-sm px-3 py-1 rounded-full">
+<span>Web Development</span>
+<button class="ml-2 text-teal-800 dark:text-teal-200 hover:text-teal-900 dark:hover:text-teal-100">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<button class="flex items-center justify-center w-8 h-8 rounded-full border border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</aside>
+<section class="md:col-span-2 lg:col-span-3 flex flex-col">
+<div class="flex-grow flex flex-col">
+<div class="mb-6">
+<h1 class="text-4xl font-bold mb-2 text-text-light dark:text-text-dark">Your Personalized Learning Path</h1>
+<p class="text-secondary-text-light dark:text-secondary-text-dark mb-6">AI-curated courses, certifications, and projects to achieve your career goals.</p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md flex-grow">
+<div class="space-y-8">
+<div>
+<h3 class="text-xl font-semibold text-text-light dark:text-text-dark mb-4 flex items-center"><span class="material-symbols-outlined mr-2 text-primary">school</span>Recommended Courses</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="border border-border-light dark:border-border-dark rounded-lg p-4 hover:shadow-lg transition-shadow">
+<p class="font-semibold">Python for Everybody</p>
+<p class="text-sm text-secondary-text-light dark:text-secondary-text-dark">Coursera</p>
+</div>
+<div class="border border-border-light dark:border-border-dark rounded-lg p-4 hover:shadow-lg transition-shadow">
+<p class="font-semibold">Machine Learning A-Z</p>
+<p class="text-sm text-secondary-text-light dark:text-secondary-text-dark">Udemy</p>
+</div>
+<div class="border border-border-light dark:border-border-dark rounded-lg p-4 hover:shadow-lg transition-shadow">
+<p class="font-semibold">Full-Stack Web Development</p>
+<p class="text-sm text-secondary-text-light dark:text-secondary-text-dark">edX</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-text-light dark:text-text-dark mb-4 flex items-center"><span class="material-symbols-outlined mr-2 text-primary">verified</span>Certifications</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="border border-border-light dark:border-border-dark rounded-lg p-4 hover:shadow-lg transition-shadow">
+<p class="font-semibold">TensorFlow Developer Certificate</p>
+<p class="text-sm text-secondary-text-light dark:text-secondary-text-dark">Google AI</p>
+</div>
+<div class="border border-border-light dark:border-border-dark rounded-lg p-4 hover:shadow-lg transition-shadow">
+<p class="font-semibold">AWS Certified Solutions Architect</p>
+<p class="text-sm text-secondary-text-light dark:text-secondary-text-dark">Amazon Web Services</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-text-light dark:text-text-dark mb-4 flex items-center"><span class="material-symbols-outlined mr-2 text-primary">code_blocks</span>Projects</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="border border-border-light dark:border-border-dark rounded-lg p-4 hover:shadow-lg transition-shadow">
+<p class="font-semibold">Build a Recommendation Engine</p>
+<p class="text-sm text-secondary-text-light dark:text-secondary-text-dark">Apply data analysis and ML skills to create a content recommendation system.</p>
+</div>
+<div class="border border-border-light dark:border-border-dark rounded-lg p-4 hover:shadow-lg transition-shadow">
+<p class="font-semibold">Deploy a Startup MVP</p>
+<p class="text-sm text-secondary-text-light dark:text-secondary-text-dark">Develop and deploy a minimum viable product for a startup idea using modern web tech.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-start items-center mt-8 pt-4 border-t border-border-light dark:border-border-dark">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 text-sm px-4 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-secondary-text-light dark:text-secondary-text-dark border border-border-light dark:border-border-dark">
+<span class="material-symbols-outlined text-base">refresh</span>
+<span>Regenerate Path</span>
+</button>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-secondary-text-light dark:text-secondary-text-dark">
+<span class="material-symbols-outlined text-base">thumb_up</span>
+</button>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 text-secondary-text-light dark:text-secondary-text-dark">
+<span class="material-symbols-outlined text-base">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

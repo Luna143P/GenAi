@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GenAI Career Copilot</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4',
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#202124",
+                        "text-dark": "#E8EAED",
+                        "secondary-text-light": "#5F6368",
+                        "secondary-text-dark": "#9AA0A6",
+                        "border-light": "#DADCE0",
+                        "border-dark": "#3C4043",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        body: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        'DEFAULT': '8px',
+                        'lg': '16px',
+                        'xl': '24px',
+                        'full': '9999px',
+                    },
+                    boxShadow: {
+                        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                        'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        },
+                        float: {
+                            '0%, 100%': {
+                                transform: 'translateY(0px)'
+                            },
+                            '50%': {
+                                transform: 'translateY(-10px)'
+                            },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark antialiased">
+    <div class="flex flex-col min-h-screen">
+        <header
+            class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm flex items-center justify-between px-6 py-4 border-b border-border-light dark:border-border-dark">
+            <div class="flex items-center gap-8">
+                <h1 class="text-2xl font-bold text-primary font-display">Dreamer</h1>
+                <nav
+                    class="hidden md:flex items-center gap-6 text-sm font-medium text-secondary-text-light dark:text-secondary-text-dark">
+                    <a class="hover:text-primary transition-colors duration-300" href="#name">Features</a>
+                    <a class="hover:text-primary transition-colors duration-300" href="#">Pricing</a>
+                    <a class="hover:text-primary transition-colors duration-300" href="#">About</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- Sign In Button -->
+                <a href="/login.html"
+                    class="px-4 py-2 text-sm font-medium text-primary border border-primary rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
+                    Sign In
+                </a>
+
+                <!-- Get Started Button -->
+                <a href="/signup.html"
+                    class="px-4 py-2 text-sm font-medium text-white bg-primary rounded-full hover:bg-blue-600 shadow-md hover:shadow-lg transition-all duration-300">
+                    Get Started
+                </a>
+            </div>
+
+        </header>
+        <main class="flex-grow">
+            <section class="relative text-center px-6 py-20 lg:py-32 overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent dark:from-primary/20 dark:to-transparent">
+                </div>
+                <div
+                    class="absolute -top-20 -left-40 w-96 h-96 bg-blue-200/50 rounded-full filter blur-3xl opacity-30 animate-float">
+                </div>
+                <div class="absolute -bottom-20 -right-40 w-96 h-96 bg-purple-200/50 rounded-full filter blur-3xl opacity-30 animate-float"
+                    style="animation-delay: 1.5s;"></div>
+                <div class="relative max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-bold font-display mb-6 text-text-light dark:text-text-dark"
+                        style="animation: fade-in-up 0.5s ease-out;">Your AI-Powered Career and Startup Assistant</h1>
+                    <p class="text-lg md:text-xl text-secondary-text-light dark:text-secondary-text-dark mb-10 max-w-3xl mx-auto"
+                        style="animation: fade-in-up 0.5s ease-out 0.2s; animation-fill-mode: backwards;">Navigate your
+                        career path and build your startup from the ground up with personalized, intelligent guidance.
+                    </p>
+                    <a href="/signup.html"
+                        class="inline-flex bg-primary text-white px-8 py-4 rounded-full items-center gap-3 text-lg font-medium mx-auto hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                        style="animation: fade-in-up 0.5s ease-out 0.4s; animation-fill-mode: backwards;">
+                        <span>Start Your Journey</span>
+                        <span
+                            class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1"></span>
+                    </a>
+
+                </div>
+            </section>
+            <section id= "name" class="bg-surface-light dark:bg-surface-dark py-24 px-6">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold font-display text-text-light dark:text-text-dark">Explore the
+                            Possibilities</h2>
+                        <p
+                            class="text-lg text-secondary-text-light dark:text-secondary-text-dark mt-4 max-w-2xl mx-auto">
+                            GenAI Career Copilot offers a suite of tools to empower your professional growth.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary/50">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-6">
+                                <span class="material-symbols-outlined text-4xl text-primary">lightbulb</span>
+                            </div>
+                            <h3 class="text-xl font-semibold font-display mb-3">Personalized Career Counseling</h3>
+                            <p class="text-secondary-text-light dark:text-secondary-text-dark">Get tailored advice on
+                                career changes, skill development, and job market trends based on your unique profile
+                                and aspirations.</p>
+                        </div>
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary/50">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-6">
+                                <span class="material-symbols-outlined text-4xl text-primary">rocket_launch</span>
+                            </div>
+                            <h3 class="text-xl font-semibold font-display mb-3">Startup Idea Validation</h3>
+                            <p class="text-secondary-text-light dark:text-secondary-text-dark">Transform your ideas into
+                                viable business plans. Our AI helps you analyze market potential, identify target
+                                audiences, and refine your concept.</p>
+                        </div>
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary/50">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-6">
+                                <span class="material-symbols-outlined text-4xl text-primary">auto_awesome</span>
+                            </div>
+                            <h3 class="text-xl font-semibold font-display mb-3">Skill Gap Analysis</h3>
+                            <p class="text-secondary-text-light dark:text-secondary-text-dark">Identify the skills you
+                                need to achieve your career goals and receive recommendations for relevant courses and
+                                learning paths.</p>
+                        </div>
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary/50">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-6">
+                                <span class="material-symbols-outlined text-4xl text-primary">work</span>
+                            </div>
+                            <h3 class="text-xl font-semibold font-display mb-3">Resume &amp; Cover Letter Builder</h3>
+                            <p class="text-secondary-text-light dark:text-secondary-text-dark">Craft compelling
+                                application materials that highlight your strengths and get noticed by recruiters.</p>
+                        </div>
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary/50">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-6">
+                                <span class="material-symbols-outlined text-4xl text-primary">insights</span>
+                            </div>
+                            <h3 class="text-xl font-semibold font-display mb-3">Market &amp; Competitor Insights</h3>
+                            <p class="text-secondary-text-light dark:text-secondary-text-dark">Gain a competitive edge
+                                with AI-driven analysis of industry trends, market dynamics, and competitor strategies
+                                for your startup.</p>
+                        </div>
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-primary/50">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-6">
+                                <span class="material-symbols-outlined text-4xl text-primary">groups</span>
+                            </div>
+                            <h3 class="text-xl font-semibold font-display mb-3">Interview Preparation</h3>
+                            <p class="text-secondary-text-light dark:text-secondary-text-dark">Practice common interview
+                                questions, receive feedback on your answers, and build the confidence to ace your next
+                                interview.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 px-6 bg-background-light dark:bg-background-dark">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-4xl font-bold font-display mb-6 text-text-light dark:text-text-dark">Ready to
+                        accelerate your career or startup?</h2>
+                    <p class="text-lg text-secondary-text-light dark:text-secondary-text-dark mb-10">Join thousands of
+                        professionals and entrepreneurs who are building their future with GenAI Career Copilot.</p>
+                    <button
+                        class="group bg-primary text-white px-8 py-4 rounded-full flex items-center gap-3 text-lg font-medium mx-auto hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        <span>Get Started for Free</span>
+                        <span
+                            class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+        <footer
+            class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark mt-auto">
+            <div
+                class="max-w-7xl mx-auto py-8 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-secondary-text-light dark:text-secondary-text-dark">
+                <p>© 2024 GenAI Career Copilot. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                    <a class="hover:text-primary transition-colors" href="#">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

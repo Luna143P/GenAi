@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gen AI Tools</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4',
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#202124",
+                        "text-dark": "#E8EAED",
+                        "secondary-text-light": "#5F6368",
+                        "secondary-text-dark": "#9AA0A6",
+                        "border-light": "#DADCE0",
+                        "border-dark": "#3C4043",
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        'DEFAULT': '8px',
+                        'lg': '16px',
+                        'xl': '24px',
+                        'full': '9999px',
+                    },
+                    boxShadow: {
+                        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="flex flex-col h-screen">
+        <header
+            class="flex items-center justify-between px-6 py-3 border-b border-border-light dark:border-border-dark">
+            <div class="flex items-center gap-8">
+                <h1 class="text-2xl font-bold">
+                    <span style="color: #4285F4;">D</span>
+                    <span style="color: #DB4437;">r</span>
+                    <span style="color: #F4B400;">e</span>
+                    <span style="color: #4285F4;">a</span>
+                    <span style="color: #0F9D58;">m</span>
+                    <span style="color: #DB4437;">e</span>
+                    <span style="color: #F4B400;">r</span>
+                </h1>
+                <nav
+                    class="hidden md:flex items-center gap-6 text-sm font-medium text-secondary-text-light dark:text-secondary-text-dark">
+                    <a class="hover:text-primary" href="dashboard.html">Dashboards</a>
+                    <a class="hover:text-primary" href="gen.html">Gen AI Tools</a>
+                    <a class="hover:text-primary" href="courses.html">Courses</a>
+                    <a class="text-primary font-semibold" href="sofskill.html">Softskills Helper</a>
+                    <a class="hover:text-primary" href="market.html">Market Insights</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="flex items-center gap-2 px-4 py-2 text-sm border rounded-full border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <span>English</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </button>
+                <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+            </div>
+        </header>
+        <main class="flex-grow grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 overflow-auto">
+            <aside
+                class="md:col-span-1 lg:col-span-1 bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md space-y-6">
+                <h2 class="text-xl font-bold text-text-light dark:text-text-dark">Soft Skills Helper</h2>
+                <p class="text-sm text-secondary-text-light dark:text-secondary-text-dark">Assess and improve your soft
+                    skills with AI-driven feedback and interactive exercises.</p>
+                <div class="border-t border-border-light dark:border-border-dark my-4"></div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Key Skills Focus</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">campaign</span>
+                            <span class="text-sm">Communication</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">groups</span>
+                            <span class="text-sm">Teamwork</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">change_circle</span>
+                            <span class="text-sm">Adaptability</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">leaderboard</span>
+                            <span class="text-sm">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-border-light dark:border-border-dark my-4"></div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">Integrations</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">smart_toy</span>
+                            <span class="text-sm">Career Copilot</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">mic</span>
+                            <span class="text-sm">Voice Agent</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-border-light dark:border-border-dark my-4"></div>
+                <button
+                    class="w-full bg-primary text-white px-5 py-2.5 rounded-full flex items-center justify-center gap-2 text-sm font-medium hover:bg-blue-600 transition-colors">
+                    <span class="material-symbols-outlined text-base">play_arrow</span>
+                    <span>Start Assessment</span>
+                </button>
+            </aside>
+            <section class="md:col-span-2 lg:col-span-3 flex flex-col gap-6">
+                <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center gap-2"><span
+                            class="material-symbols-outlined text-primary">rule</span> Soft Skills Assessment</h3>
+                    <p class="text-sm text-secondary-text-light dark:text-secondary-text-dark mb-4">Engage in
+                        interactive exercises to gauge your soft skills. Get instant feedback on your performance.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-sm mb-2">Interactive Exercises</h4>
+                            <p class="text-xs text-secondary-text-light dark:text-secondary-text-dark">Test your skills
+                                in realistic scenarios.</p>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-sm mb-2">Voice Analysis</h4>
+                            <p class="text-xs text-secondary-text-light dark:text-secondary-text-dark">Assess your tone,
+                                clarity, and confidence.</p>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-sm mb-2">Scenario-Based Tasks</h4>
+                            <p class="text-xs text-secondary-text-light dark:text-secondary-text-dark">Navigate
+                                challenging workplace situations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center gap-2"><span
+                            class="material-symbols-outlined text-primary">model_training</span> Interactive Training
+                        &amp; Exercises</h3>
+                    <p class="text-sm text-secondary-text-light dark:text-secondary-text-dark mb-4">Improve your skills
+                        through dynamic and engaging training modules.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-sm mb-2">Roleplay Simulations</h4>
+                            <p class="text-xs text-secondary-text-light dark:text-secondary-text-dark">Practice
+                                conversations with AI avatars.</p>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-sm mb-2">Problem-Solving Scenarios</h4>
+                            <p class="text-xs text-secondary-text-light dark:text-secondary-text-dark">Tackle complex
+                                problems collaboratively.</p>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-sm mb-2">Gamified Activities</h4>
+                            <p class="text-xs text-secondary-text-light dark:text-secondary-text-dark">Make learning fun
+                                and motivating.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2"><span
+                                class="material-symbols-outlined text-primary">trending_up</span> Personalized
+                            Development Roadmap</h3>
+                        <p class="text-sm text-secondary-text-light dark:text-secondary-text-dark mb-4">Receive a
+                            tailored plan to enhance your soft skills, with actionable steps and progress tracking.</p>
+                        <button
+                            class="w-full text-sm text-primary border border-primary rounded-full py-2 hover:bg-blue-50 dark:hover:bg-blue-900/20">View
+                            My Roadmap</button>
+                    </div>
+                    <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2"><span
+                                class="material-symbols-outlined text-primary">record_voice_over</span> Voice &amp;
+                            Communication Coaching</h3>
+                        <p class="text-sm text-secondary-text-light dark:text-secondary-text-dark mb-4">Get detailed
+                            speech analysis and real-time feedback to refine your communication style.</p>
+                        <button
+                            class="w-full text-sm text-primary border border-primary rounded-full py-2 hover:bg-blue-50 dark:hover:bg-blue-900/20">Start
+                            Voice Coaching</button>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

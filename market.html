@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gen AI Tools</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4',
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#202124",
+                        "text-dark": "#E8EAED",
+                        "secondary-text-light": "#5F6368",
+                        "secondary-text-dark": "#9AA0A6",
+                        "border-light": "#DADCE0",
+                        "border-dark": "#3C4043",
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        'DEFAULT': '8px',
+                        'lg': '16px',
+                        'xl': '24px',
+                        'full': '9999px',
+                    },
+                    boxShadow: {
+                        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="flex flex-col h-screen">
+        <header
+            class="flex items-center justify-between px-6 py-3 border-b border-border-light dark:border-border-dark">
+            <div class="flex items-center gap-8">
+                <h1 class="text-2xl font-bold">
+                    <span style="color: #4285F4;">D</span>
+                    <span style="color: #DB4437;">r</span>
+                    <span style="color: #F4B400;">e</span>
+                    <span style="color: #4285F4;">a</span>
+                    <span style="color: #0F9D58;">m</span>
+                    <span style="color: #DB4437;">e</span>
+                    <span style="color: #F4B400;">r</span>
+                </h1>
+                <nav
+                    class="hidden md:flex items-center gap-6 text-sm font-medium text-secondary-text-light dark:text-secondary-text-dark">
+                    <a class="hover:text-primary" href="dashboard.html">Dashboards</a>
+                    <a class="hover:text-primary" href="gen.html">Gen AI Tools</a>
+                    <a class="hover:text-primary" href="courses.html">Courses</a>
+                    <a class="hover:text-primary" href="sofskill.html">Softskills Helper</a>
+                    <a class="text-primary font-semibold" href="market.html">Market Insights</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="flex items-center gap-2 px-4 py-2 text-sm border rounded-full border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <span>English</span>
+                    <span class="material-symbols-outlined">expand_more</span>
+                </button>
+                <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+            </div>
+        </header>
+        <main class="flex-grow p-6 overflow-auto">
+<div class="max-w-7xl mx-auto">
+<h1 class="text-4xl font-bold mb-2 text-text-light dark:text-text-dark">Market Insights</h1>
+<p class="text-secondary-text-light dark:text-secondary-text-dark mb-8">Real-time data to inform your career and startup decisions.</p>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-semibold text-text-light dark:text-text-dark">Job Trends</h2>
+<div class="flex items-center gap-2">
+<span class="text-sm text-secondary-text-light dark:text-secondary-text-dark">Data Science</span>
+<button class="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<div class="chart-container bg-gray-50 dark:bg-gray-800 rounded-lg flex items-center justify-center">
+<p class="text-secondary-text-light dark:text-secondary-text-dark">Job Postings Growth (Line Chart)</p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+<h2 class="text-xl font-semibold text-text-light dark:text-text-dark mb-4">Top 5 Emerging Skills</h2>
+<div class="space-y-4">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-3">model_training</span>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<p class="font-medium">Machine Learning</p>
+<span class="text-sm font-medium text-green-600 dark:text-green-400">+25%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-3">cloud</span>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<p class="font-medium">Cloud Computing</p>
+<span class="text-sm font-medium text-green-600 dark:text-green-400">+22%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-3">analytics</span>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<p class="font-medium">Data Analysis</p>
+<span class="text-sm font-medium text-green-600 dark:text-green-400">+18%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-3">security</span>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<p class="font-medium">Cybersecurity</p>
+<span class="text-sm font-medium text-green-600 dark:text-green-400">+15%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-3">hub</span>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<p class="font-medium">Blockchain</p>
+<span class="text-sm font-medium text-green-600 dark:text-green-400">+12%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 50%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+<div class="flex items-start mb-4">
+<span class="material-symbols-outlined text-primary mr-3 mt-1">auto_awesome</span>
+<h2 class="text-xl font-semibold text-text-light dark:text-text-dark">AI Recommendations</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+<p class="font-semibold text-blue-800 dark:text-blue-200">Career Path</p>
+<p class="text-sm text-blue-700 dark:text-blue-300">Based on your interest in 'Content Creation', consider a 'Digital Marketing Specialist' role. It has a 15% projected growth.</p>
+</div>
+<div class="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg">
+<p class="font-semibold text-green-800 dark:text-green-200">Skill Development</p>
+<p class="text-sm text-green-700 dark:text-green-300">To enhance your profile, learn 'SEO Analytics'. It's a high-demand skill in your target industry.</p>
+</div>
+<div class="bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg">
+<p class="font-semibold text-yellow-800 dark:text-yellow-200">Startup Idea</p>
+<p class="text-sm text-yellow-700 dark:text-yellow-300">Your skills in 'Sales' and 'Social Media' align with a startup creating AI-powered sales bots for small businesses.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+<h2 class="text-xl font-semibold text-text-light dark:text-text-dark mb-4">Industry Growth</h2>
+<ul class="space-y-3">
+<li class="flex items-center justify-between">
+<span class="text-secondary-text-light dark:text-secondary-text-dark">Fintech</span>
+<span class="font-medium text-green-600 dark:text-green-400">12% YoY</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-secondary-text-light dark:text-secondary-text-dark">Healthcare Tech</span>
+<span class="font-medium text-green-600 dark:text-green-400">10% YoY</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-secondary-text-light dark:text-secondary-text-dark">E-commerce</span>
+<span class="font-medium text-green-600 dark:text-green-400">9% YoY</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-secondary-text-light dark:text-secondary-text-dark">Renewable Energy</span>
+<span class="font-medium text-green-600 dark:text-green-400">8% YoY</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-md">
+<h2 class="text-xl font-semibold text-text-light dark:text-text-dark mb-4">Startup Hotspots</h2>
+<div class="flex justify-center items-center h-40 bg-gray-50 dark:bg-gray-800 rounded-lg">
+<p class="text-secondary-text-light dark:text-secondary-text-dark">Funding Trends (Bar Chart)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

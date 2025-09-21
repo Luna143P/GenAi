@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Gen AI Tools</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4',
+                        "background-light": "#F8F9FA",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#202124",
+                        "text-dark": "#E8EAED",
+                        "secondary-text-light": "#5F6368",
+                        "secondary-text-dark": "#9AA0A6",
+                        "border-light": "#DADCE0",
+                        "border-dark": "#3C4043",
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        'DEFAULT': '12px',
+                        'lg': '20px',
+                        'xl': '28px',
+                        'full': '9999px',
+                    },
+                    boxShadow: {
+                        'md': '0 10px 25px rgba(0,0,0,0.1)',
+                        'lg': '0 15px 35px rgba(0,0,0,0.2)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+
+<div class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8 p-10 bg-surface-light dark:bg-surface-dark rounded-xl shadow-lg">
+        <!-- Logo & Header -->
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-2">
+                <span style="color: #4285F4;">D</span>
+                <span style="color: #DB4437;">r</span>
+                <span style="color: #F4B400;">e</span>
+                <span style="color: #4285F4;">a</span>
+                <span style="color: #0F9D58;">m</span>
+                <span style="color: #DB4437;">e</span>
+                <span style="color: #F4B400;">r</span>
+            </h1>
+            <p class="text-gray-500 dark:text-gray-400 text-lg">Create your account</p>
+        </div>
+
+        <!-- Form -->
+        <div class="mt-6 space-y-4">
+            <div class="rounded-lg shadow-sm -space-y-px">
+                <div>
+                    <label for="name" class="sr-only">Full Name</label>
+                    <input id="name" name="name" type="text" required
+                        class="appearance-none rounded-t-lg relative block w-full px-4 py-3 border border-border-light dark:border-border-dark placeholder-secondary-text-light dark:placeholder-secondary-text-dark text-text-light dark:text-text-dark bg-surface-light dark:bg-surface-dark focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+                        placeholder="Full Name">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email address</label>
+                    <input id="email" name="email" type="email" required
+                        class="appearance-none relative block w-full px-4 py-3 border border-border-light dark:border-border-dark placeholder-secondary-text-light dark:placeholder-secondary-text-dark text-text-light dark:text-text-dark bg-surface-light dark:bg-surface-dark focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+                        placeholder="Email address">
+                </div>
+                <div>
+                    <label for="password" class="sr-only">Password</label>
+                    <input id="password" name="password" type="password" required
+                        class="appearance-none rounded-b-lg relative block w-full px-4 py-3 border border-border-light dark:border-border-dark placeholder-secondary-text-light dark:placeholder-secondary-text-dark text-text-light dark:text-text-dark bg-surface-light dark:bg-surface-dark focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+                        placeholder="Password">
+                </div>
+            </div>
+
+            <!-- Sign Up Button -->
+            <button id="signUpBtn"
+                class="w-full flex justify-center py-3 px-6 bg-primary hover:bg-blue-600 text-white font-medium rounded-lg shadow-md transition duration-300 ease-in-out items-center relative">
+                <span class="absolute left-4 material-symbols-outlined">person_add</span>
+                Sign Up
+            </button>
+
+            <!-- OR Divider -->
+            <div class="flex items-center my-4">
+                <div class="flex-grow border-t border-border-light dark:border-border-dark"></div>
+                <span class="mx-4 text-secondary-text-light dark:text-secondary-text-dark text-sm">OR</span>
+                <div class="flex-grow border-t border-border-light dark:border-border-dark"></div>
+            </div>
+
+            <!-- Social Sign Up -->
+            <div class="grid grid-cols-3 gap-3">
+                <button id="googleSignUpBtn" class="flex justify-center py-3 px-4 border border-border-light dark:border-border-dark rounded-lg shadow-sm bg-surface-light dark:bg-surface-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    <img class="h-5 w-5" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo">
+                </button>
+                <button class="flex justify-center py-3 px-4 border border-border-light dark:border-border-dark rounded-lg shadow-sm bg-surface-light dark:bg-surface-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    <img class="h-5 w-5" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/github.svg" alt="GitHub logo">
+                </button>
+                <button class="flex justify-center py-3 px-4 border border-border-light dark:border-border-dark rounded-lg shadow-sm bg-surface-light dark:bg-surface-dark hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    <img class="h-5 w-5" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/twitter.svg" alt="Twitter logo">
+                </button>
+            </div>
+
+            <!-- Sign In Link -->
+            <p class="text-center text-sm text-secondary-text-light dark:text-secondary-text-dark mt-6">
+                Already have an account?
+                <a href="/login.html" class="text-primary font-medium hover:underline">Sign in</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Fetch Firebase configuration
+    fetch('/config/firebase')
+        .then(response => response.json())
+        .then(firebaseConfig => {
+            firebase.initializeApp(firebaseConfig);
+
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const signUpBtn = document.getElementById('signUpBtn');
+            const googleSignUpBtn = document.getElementById('googleSignUpBtn');
+
+            // Email/Password Sign Up
+            signUpBtn.addEventListener('click', async () => {
+                const name = nameInput.value.trim();
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+
+                if (!name || !email || !password) return alert('Please fill all fields');
+
+                try {
+                    const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
+                    await userCredential.user.updateProfile({ displayName: name });
+                    window.location.href = '/startup.html';
+                } catch (error) {
+                    alert(error.message);
+                }
+            });
+
+            // Google Sign Up
+            googleSignUpBtn.addEventListener('click', async () => {
+                const provider = new firebase.auth.GoogleAuthProvider();
+                try {
+                    await firebase.auth().signInWithPopup(provider);
+                    window.location.href = '/startup.html';
+                } catch (error) {
+                    alert(error.message);
+                }
+            });
+
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) window.location.href = '/startup.html';
+            });
+        })
+        .catch(error => alert('Error loading Firebase configuration'));
+</script>
+
+</body>
+</html>
